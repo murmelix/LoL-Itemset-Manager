@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="row">
+    <div class="col-xs-8">
+        <br/>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Items</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Tier</th>
+                            <th>Attack</th>
+                            <th>Magic</th>
+                            <th>Defense</th>
+                            <th>Misc</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" value="tier1" /><label class="label">Basic</label></td>
+                            <td><input type="checkbox" value="ad" /><label class="label">Damage</label></td>
+                            <td><input type="checkbox" value="ap" /><label class="label">Ability Power</label></td>
+                            <td><input type="checkbox" value="health" /><label class="label">Health</label></td>
+                            <td><input type="checkbox" value="ms" /><label class="label">Movement</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" value="tier2" /><label class="label">Advanced</label></td>
+                            <td><input type="checkbox" value="as" /><label class="label">Attack Speed</label></td>
+                            <td><input type="checkbox" value="cdr" /><label class="label">Cooldown Reduction</label></td>
+                            <td><input type="checkbox" value="armor" /><label class="label">Armor</label></td>
+                            <td><input type="checkbox" value="consumable" /><label class="label">Consumable</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" value="tier3" /><label class="label">Legendary</label></td>
+                            <td><input type="checkbox" value="ls" /><label class="label">Life Steal</label></td>
+                            <td><input type="checkbox" value="mana" /><label class="label">Mana</label></td>
+                            <td><input type="checkbox" value="mr" /><label class="label">Magic Resist</label></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="checkbox" value="crit" /><label class="label">Critical Strike</label></td>
+                            <td><input type="checkbox" value="manareg" /><label class="label">Mana Regen</label></td>
+                            <td><input type="checkbox" value="healthReg" /><label class="label">Health Regen</label></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="well">
+            @foreach (var x in ViewBag.Data)
+            {
+                if (!x.HideFromAll && !x.IsBilgewater)
+                {
+                    <img data-toggle="popover" class="itemicon2 img-rounded" src="../Image/Item/@(x.Id)" data-content="@(x.SanitizedDescription)" title="@(x.Name)"></img>
+                }
+            }
+            <div style="clear:left;"></div>
+        </div>
+    </div>
+</div>
+
+        @section scripts
+{
+            <script type="text/javascript">
+                $(function () {
+                    $('[data-toggle="popover"]').popover();
+                });
+            </script>
+        }
