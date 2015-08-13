@@ -11,9 +11,9 @@ namespace Lol.Api.Static.Items
     [DataContract]
     public class GroupDto
     {
-        [DataMember(Name = "MaxGroupOwnable"), XmlElement(ElementName = "MaxGroupOwnable")]
+        [DataMember(Name = "MaxGroupOwnable")]
         public string MaxGroupOwnable { get; set; }
-        [DataMember(Name = "key"), XmlElement(ElementName = "key")]
+        [DataMember(Name = "key")]
         public string Key { get; set; }
     }
 }

@@ -1,11 +1,16 @@
 ﻿using Lol.Api.Static;
+using Lol.Api.Static.Champion;
+using Lol.Api.Static.Items;
 using Lol.Itemsets.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Mvc;
 
 namespace Lol.Itemsets.Controllers
@@ -14,7 +19,8 @@ namespace Lol.Itemsets.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Data = ItemModel.Items.Values;
+            ViewBag.ItemData = ItemModel.Items.Values;
+            ViewBag.ChampData = ChampionModel.Champions.Values;
             ViewBag.CurrentCulture = Thread.CurrentThread.CurrentUICulture;
             return View();
         }

@@ -32,7 +32,7 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,13 +47,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interface\IStaticService.cs" />
+    <Compile Include="Static\BlockDto.cs" />
+    <Compile Include="Static\Champion\ChampionDto.cs" />
     <Compile Include="Static\Champion\ChampionListDto.cs" />
+    <Compile Include="Static\Champion\ChampionSpellDto.cs" />
+    <Compile Include="Static\Champion\InfoDto.cs" />
+    <Compile Include="Static\Champion\LevelTipDto.cs" />
+    <Compile Include="Static\Champion\PassiveDto.cs" />
+    <Compile Include="Static\Champion\SkinDto.cs" />
+    <Compile Include="Static\Champion\SpellVarsDto.cs" />
+    <Compile Include="Static\Champion\StatsDto.cs" />
+    <Compile Include="Static\Items\BlockItemDto.cs" />
+    <Compile Include="Static\StaticJsonAdapter.cs" />
+    <Compile Include="Static\RecommendedDto.cs" />
     <Compile Include="Static\StaticServiceAdapter.cs" />
     <Compile Include="Static\Items\BasicDataDto.cs" />
     <Compile Include="Static\Items\BasicDataStatsDto.cs" />
     <Compile Include="Static\Items\GoldDto.cs" />
     <Compile Include="Static\Items\GroupDto.cs" />
-    <Compile Include="Static\Items\ImageDto.cs" />
+    <Compile Include="Static\ImageDto.cs" />
     <Compile Include="Static\Items\ItemDto.cs" />
     <Compile Include="Static\Items\ItemListDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +75,9 @@
     <Compile Include="Toolkit\JsonBehavior.cs" />
     <Compile Include="Toolkit\JsonClientFormatter.cs" />
     <Compile Include="Toolkit\WcfServiceClient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

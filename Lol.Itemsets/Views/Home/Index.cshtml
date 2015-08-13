@@ -57,12 +57,23 @@
 <div class="row">
     <div class="col-xs-12">
         <div class="well">
-            @foreach (var x in ViewBag.Data)
+            @foreach (var x in ViewBag.ItemData)
             {
                 if (!x.HideFromAll && !x.IsBilgewater)
                 {
                     <img data-toggle="popover" class="itemicon2 img-rounded" src="../Image/Item/@(x.Id)" data-content="@(x.SanitizedDescription)" title="@(x.Name)"></img>
                 }
+            }
+            <div style="clear:left;"></div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="well">
+            @foreach (var x in ViewBag.ChampData)
+            {
+                <img data-toggle="popover" class="itemicon2 img-rounded" src="../Image/Champion/@(x.Key)" data-content="@(x.Lore)" title="@(x.Name)"></img>               
             }
             <div style="clear:left;"></div>
         </div>

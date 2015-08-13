@@ -12,17 +12,17 @@ namespace Lol.Api.Static.Items
     [DataContract]
     public class ItemListDto
     {
-        [DataMember(Name="basic"), XmlElement(ElementName="basic")]
+        [DataMember(Name="basic")]
         public BasicDataDto Basic { get; set; }
-        [DataMember(Name = "data"), XmlArray(ElementName = "data"), XmlArrayItem(ElementName="item")]
-        public List<ItemDto> Data { get; set; }
-        [DataMember(Name = "groups"), XmlArray(ElementName = "groups"), XmlArrayItem(ElementName = "item")]
+        [DataMember(Name = "data")]
+        public Dictionary<string,ItemDto> Data { get; set; }
+        [DataMember(Name = "groups")]
         public List<GroupDto> Groups { get; set; }
-        [DataMember(Name = "tree"), XmlArray(ElementName = "tree"), XmlArrayItem(ElementName = "item")]
+        [DataMember(Name = "tree")]
         public List<ItemTreeDto> Tree { get; set; }
-        [DataMember(Name = "type"), XmlElement(ElementName = "type")]
+        [DataMember(Name = "type")]
         public string Type { get; set; }
-        [DataMember(Name = "version"), XmlElement(ElementName = "version")]
+        [DataMember(Name = "version")]
         public string Version { get; set; }
     }
 }

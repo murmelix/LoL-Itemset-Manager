@@ -21,7 +21,7 @@ namespace Lol.Api.Static
             return base.Channel.ListItems(region, locale, apikey);
         }
 
-        public Champions.ChampionListDto ListChampions(string region, string locale, string apikey)
+        public Champion.ChampionListDto ListChampions(string region, string locale, string apikey)
         {
             return base.Channel.ListChampions(region, locale, apikey);
         }

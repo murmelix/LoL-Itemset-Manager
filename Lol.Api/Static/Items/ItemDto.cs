@@ -10,6 +10,8 @@ namespace Lol.Api.Static.Items
     [DataContract]
     public class ItemDto : BasicDataDto
     {
-        public bool IsBilgewater { get { return Tags.Any(x => x == "Bilgewater"); } }
+        public bool IsBilgewater { get { return Tags != null && Tags.Any(x => x == "Bilgewater"); } }
+        [DataMember(Name = "effect")]
+        public Dictionary<string, string> Effect { get; set; }
     }
 }

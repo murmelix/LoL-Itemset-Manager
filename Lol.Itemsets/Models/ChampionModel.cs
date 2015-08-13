@@ -1,4 +1,4 @@
-﻿using Lol.Api.Static;
+﻿using Lol.Api.Static.Champion;
 using Lol.Api.Static.Items;
 using System;
 using System.Collections.Generic;
@@ -9,20 +9,20 @@ using System.Web.Configuration;
 
 namespace Lol.Itemsets.Models
 {
-    public class ItemModel
+    public class ChampionModel
     {
-        private static Dictionary<string, ItemDto> _items = null;
+        private static Dictionary<string, ChampionDto> _items = null;
 
-        public static Dictionary<string, ItemDto> Items
+        public static Dictionary<string, ChampionDto> Champions
         {
             get
             {
                 if (_items == null)
                 {
-                    _items = new Dictionary<string, ItemDto>();
-                    var adapter = new StaticJsonAdapter(HttpContext.Current.Server.MapPath("~/Content"));                    
-                    var result = adapter.ListItems("euw", CultureString, ApiKey);
-                    _items = result.Data;                  
+                    _items = new Dictionary<string, ChampionDto>();
+                    var adapter = new StaticJsonAdapter(HttpContext.Current.Server.MapPath("~/Content"));
+                    var result = adapter.ListChampions("euw", CultureString, ApiKey);
+                    _items = result.Data;
                 }
                 return _items;
             }

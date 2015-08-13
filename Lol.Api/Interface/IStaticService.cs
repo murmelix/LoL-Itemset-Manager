@@ -1,4 +1,5 @@
-﻿using Lol.Api.Static.Items;
+﻿using Lol.Api.Static.Champion;
+using Lol.Api.Static.Items;
 using Lol.Api.Toolkit;
 using System;
 using System.Collections.Generic;

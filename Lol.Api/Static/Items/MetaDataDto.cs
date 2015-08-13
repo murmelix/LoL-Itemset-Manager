@@ -11,11 +11,11 @@ namespace Lol.Api.Static.Items
     [DataContract]
     public class MetaDataDto
     {
-        [DataMember(Name = "isRune"), XmlElement(ElementName = "isRune")]
+        [DataMember(Name = "isRune")]
         public bool IsRune { get; set; }
-        [DataMember(Name = "tier"), XmlElement(ElementName = "tier")]
+        [DataMember(Name = "tier")]
         public string Tier { get; set; }
-        [DataMember(Name = "type"), XmlElement(ElementName = "type")]
+        [DataMember(Name = "type")]
         public string Type { get; set; }
     }
 }

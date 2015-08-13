@@ -11,13 +11,13 @@ namespace Lol.Api.Static.Items
     [DataContract]
     public class GoldDto
     {
-        [DataMember(Name = "base"), XmlElement(ElementName = "base")]
+        [DataMember(Name = "base")]
         public int Base { get; set; }
-        [DataMember(Name = "purchasable"), XmlElement(ElementName = "purchasable")]
+        [DataMember(Name = "purchasable")]
         public bool Purchasable { get; set; }
-        [DataMember(Name = "sell"), XmlElement(ElementName = "sell")]
+        [DataMember(Name = "sell")]
         public int Sell { get; set; }
-        [DataMember(Name = "total"), XmlElement(ElementName = "total")]
+        [DataMember(Name = "total")]
         public int Total { get; set; }
     }
 }

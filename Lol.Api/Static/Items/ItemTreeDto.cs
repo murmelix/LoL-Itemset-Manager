@@ -11,9 +11,9 @@ namespace Lol.Api.Static.Items
     [DataContract]
     public class ItemTreeDto
     {
-        [DataMember(Name = "header"), XmlElement(ElementName = "header")]
+        [DataMember(Name = "header")]
         public string Header { get; set; }
-        [DataMember(Name = "tags"), XmlArray(ElementName = "tags"), XmlArrayItem(ElementName = "item")]
+        [DataMember(Name = "tags")]
         public List<string> Tags { get; set; }
     }
 }

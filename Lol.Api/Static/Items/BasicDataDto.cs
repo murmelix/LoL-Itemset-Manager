@@ -11,51 +11,51 @@ namespace Lol.Api.Static.Items
     [DataContract]
     public class BasicDataDto
     {
-        [DataMember(Name = "colloq"), XmlElement(ElementName = "colloq")]
+        [DataMember(Name = "colloq")]
         public string Colloq { get; set; }
-        [DataMember(Name = "consumeOnFull"), XmlElement(ElementName = "consumeOnFull")]
+        [DataMember(Name = "consumeOnFull")]
         public bool ConsumeOnFull { get; set; }
-        [DataMember(Name = "consumed"), XmlElement(ElementName = "consumed")]
+        [DataMember(Name = "consumed")]
         public bool Consumed { get; set; }
-        [DataMember(Name = "depth"), XmlElement(ElementName = "depth")]
+        [DataMember(Name = "depth")]
         public int Depth { get; set; }
-        [DataMember(Name = "description"), XmlElement(ElementName = "description")]
+        [DataMember(Name = "description")]
         public string Description { get; set; }
-        [DataMember(Name = "from"), XmlArray(ElementName = "from"), XmlArrayItem(ElementName = "item")]
+        [DataMember(Name = "from")]
         public List<string> From { get; set; }
-        [DataMember(Name = "gold"), XmlElement(ElementName = "gold")]
+        [DataMember(Name = "gold")]
         public GoldDto Gold { get; set; }
-        [DataMember(Name = "group"), XmlElement(ElementName = "group")]
+        [DataMember(Name = "group")]
         public string Group { get; set; }
-        [DataMember(Name = "hideFromAll"), XmlElement(ElementName = "hideFromAll")]
+        [DataMember(Name = "hideFromAll")]
         public bool HideFromAll { get; set; }
-        [DataMember(Name = "id"), XmlElement(ElementName = "id")]
+        [DataMember(Name = "id")]
         public int Id { get; set; }
-        [DataMember(Name = "image"), XmlElement(ElementName = "image")]
+        [DataMember(Name = "image")]
         public ImageDto Image { get; set; }
-        [DataMember(Name = "inStore"), XmlElement(ElementName = "inStore")]
+        [DataMember(Name = "inStore")]
         public bool InStore { get; set; }
-        [DataMember(Name = "into"), XmlArray(ElementName = "into"), XmlArrayItem(ElementName = "item")]
+        [DataMember(Name = "into")]
         public List<string> Into { get; set; }
-        [DataMember(Name = "maps"), XmlArray(ElementName = "maps"), XmlArrayItem(ElementName = "item")]
-        public List<string> Maps { get; set; }
-        [DataMember(Name = "name"), XmlElement(ElementName = "name")]
+        [DataMember(Name = "maps")]
+        public Dictionary<string, bool> Maps { get; set; }
+        [DataMember(Name = "name")]
         public string Name { get; set; }
-        [DataMember(Name = "plaintext"), XmlElement(ElementName = "plaintext")]
+        [DataMember(Name = "plaintext")]
         public string Plaintext { get; set; }
-        [DataMember(Name = "requiredChampion"), XmlElement(ElementName = "requiredChampion")]
+        [DataMember(Name = "requiredChampion")]
         public string RequiredChampion { get; set; }
-        [DataMember(Name = "rune"), XmlElement(ElementName = "rune")]
+        [DataMember(Name = "rune")]
         public MetaDataDto Rune { get; set; }
-        [DataMember(Name = "sanitizedDescription"), XmlElement(ElementName = "sanitizedDescription")]
+        [DataMember(Name = "sanitizedDescription")]
         public string SanitizedDescription { get; set; }
-        [DataMember(Name = "specialRecipe"), XmlElement(ElementName = "specialRecipe")]
+        [DataMember(Name = "specialRecipe")]
         public int SpecialRecipe { get; set; }
-        [DataMember(Name = "stacks"), XmlElement(ElementName = "stacks")]
+        [DataMember(Name = "stacks")]
         public int Stacks { get; set; }
-        [DataMember(Name = "stats"), XmlElement(ElementName = "stats")]
+        [DataMember(Name = "stats")]
         public BasicDataStatsDto Stats { get; set; }
-        [DataMember(Name = "tags"), XmlArray(ElementName = "tags"), XmlArrayItem(ElementName = "item")]
+        [DataMember(Name = "tags")]
         public List<string> Tags { get; set; }
     }
 }
